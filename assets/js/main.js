@@ -26,7 +26,7 @@ function displayPhotos(photos) {
         
         const photoDiv = `
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 pos-rel">
-                <img src="./assets/img/pin.svg" alt="pin" class="overlay-img">
+                <img id="pin" src="./assets/img/pin.svg" alt="pin" class="overlay-img">
                 <figure class="polaroid">
                     <img src="${photo.url}" alt="${photo.title}">
                     <figcaption class="pt-5 edu-tas-beginner-fig-caption figcaption" >${capTitle}</figcaption>

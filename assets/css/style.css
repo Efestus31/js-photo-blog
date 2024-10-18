@@ -44,7 +44,7 @@
     box-shadow: 2px 2px 4px #888888;
     margin-bottom: 10px;
     margin-top: 30px;
-    height: 375px;
+    height: 450px;
 }
 
 .polaroid img {
@@ -68,12 +68,21 @@
 .figcaption {
     color: #000;
     margin-top: 10px;
-    padding: 0;
-    
     
 }
+.pos-rel:hover{
+    rotate: 30deg;
+    scale: 1.2;
+    z-index: 11;
+    #pin{
+        display: none;
+    }
+}
 
-@media (min-width: 768px) {
+
+
+/* media query */
+@media (max-width: 768px) {
     .polaroid {
         min-height: 400px;
     }
@@ -82,7 +91,6 @@
 @media (max-width: 576px) {
     .polaroid {
         padding: 10px;
-        min-height: fit-content;
         margin: 0 50px;
         margin-top: 35px;
     }
