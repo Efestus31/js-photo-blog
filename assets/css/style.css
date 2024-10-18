@@ -1,26 +1,61 @@
-
 /* #region utility */
 
-.fs-9{
+.fs-9 {
     font-size: 74px;
 }
+
 .sometype-mono-h1 {
     font-family: "Sometype Mono", monospace;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }
+}
 
- 
+
 
 .edu-tas-beginner-h1 {
-  font-family: "Edu TAS Beginner", cursive;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Edu TAS Beginner", cursive;
+    font-weight: 600;
+    font-style: normal;
 }
-  /* #endregion utility */
-#app_header{
+
+/* #endregion utility */
+
+#app_header {
     background-image: url("../img/wall.png");
     padding: 2rem;
+}
+
+#app_main{
+    background-image: url(../img/cork.png);
+}
+
+.polaroid {
+    background-color: #fff;
+    padding: 15px 0px 25px 0px; /* Top, Right, Bottom, Left */ 
+    box-shadow: 2px 2px 4px #888888;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    height: 375px;
+}
+
+.polaroid img {
+    width: 600; 
+    height: 600; 
+}
+
+.pos-rel{
+    position: relative;
+}
+.overlay-img {
+    position: absolute; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 30px; 
+    height: auto; 
+    z-index: 10; 
+}
+figcaption {
+    color: #000;
+    text-align: center;
 }
