@@ -11,27 +11,36 @@
 }
 
 
-
 .edu-tas-beginner-h1 {
     font-family: "Edu TAS Beginner", cursive;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
+    
+}
+.edu-tas-beginner-fig-caption {
+    font-family: "Edu TAS Beginner", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:large;
+    word-spacing: 5px;
 }
 
 /* #endregion utility */
 
 #app_header {
     background-image: url("../img/wall.png");
+    background-size: 600px;
     padding: 2rem;
 }
 
 #app_main{
     background-image: url(../img/cork.png);
+    background-size: 600px;
 }
 
 .polaroid {
     background-color: #fff;
-    padding: 15px 0px 25px 0px; /* Top, Right, Bottom, Left */ 
+    padding: 15px 15px 50px 15px; /* Top, Right, Bottom, Left */ 
     box-shadow: 2px 2px 4px #888888;
     margin-bottom: 10px;
     margin-top: 30px;
@@ -39,8 +48,9 @@
 }
 
 .polaroid img {
-    width: 600; 
-    height: 600; 
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
 }
 
 .pos-rel{
@@ -55,7 +65,25 @@
     height: auto; 
     z-index: 10; 
 }
-figcaption {
+.figcaption {
     color: #000;
-    text-align: center;
+    margin-top: 10px;
+    padding: 0;
+    
+    
+}
+
+@media (min-width: 768px) {
+    .polaroid {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .polaroid {
+        padding: 10px;
+        min-height: fit-content;
+        margin: 0 50px;
+        margin-top: 35px;
+    }
 }
