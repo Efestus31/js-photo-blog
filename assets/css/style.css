@@ -1,3 +1,26 @@
-#titolo{
-    
+
+/* #region utility */
+
+.fs-9{
+    font-size: 74px;
+}
+.sometype-mono-h1 {
+    font-family: "Sometype Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+ 
+
+.edu-tas-beginner-h1 {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+  /* #endregion utility */
+#app_header{
+    background-image: url("../img/wall.png");
+    padding: 2rem;
 }
