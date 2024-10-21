@@ -20,22 +20,36 @@ function upFirstLetter(str){
 function displayPhotos(photos) {
  polaroidEl.innerHTML = '';
 
-    for (let i = 0; i < photos.length; i++) {
-        const photo = photos[i];
-        const capTitle = upFirstLetter(photo.title)
-        
-        const photoDiv = `
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 pos-rel">
-                <img id="pin" src="./assets/img/pin.svg" alt="pin" class="overlay-img">
+ const photoDivs = photos.map(photo => {
+    const capTitle = upFirstLetter(photo.title);
+    return `
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 pos-rel ">
+                <img  class="pin" src="./assets/img/pin.svg" alt="pin">
                 <figure class="polaroid">
                     <img src="${photo.url}" alt="${photo.title}">
-                    <figcaption class="pt-5 edu-tas-beginner-fig-caption figcaption" >${capTitle}</figcaption>
+                    <figcaption class="pt-5 edu-tas-beginner-fig-caption figcaption">${capTitle}</figcaption>
                 </figure>
-            </div>
-      `;
-      polaroidEl.innerHTML += photoDiv;
-    }
+                <div class="custom-overlay" onclick="toggleOverlay(false)">
+                    <img src="${photo.url}" alt="">
+                </div>
+        </div>
+    `;
+}).join('');
+
+polaroidEl.innerHTML = photoDivs;
 }
 
 fetchData();
 
+document.querySelectorAll('.polaroid').forEach(pin => {
+    pin.addEventListener('click', () => {
+        toggleOverlay(true); 
+    });
+});
+
+function toggleOverlay(show) {
+    const overlay = document.querySelector('.custom-overlay');
+    if (overlay) {
+        overlay.style.display = show ? 'block' : 'none';
+    }
+}
