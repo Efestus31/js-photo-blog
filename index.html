@@ -37,8 +37,12 @@
     <main id="app_main" class="">
         <div class="container ">
             <div id="polar" class="row row-cols-3 g-3">
-                
-                
+            </div>
+        </div>
+        <div id="custom-overlay" class="custom-overlay" onclick="toggleOverlay(false)">
+            <div class="overlay-content" onclick="event.stopPropagation();"> 
+                <button onclick="toggleOverlay(false)">Chiudi</button>
+                <img id="overlay-image" src="" alt="Overlay Image">
             </div>
         </div>
 
