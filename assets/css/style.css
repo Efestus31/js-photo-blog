@@ -107,6 +107,20 @@
     max-width: 80%; 
     max-height: 80%; 
 }
+.close-button {
+    position: absolute;
+    top: -50px; /* Puoi modificare la posizione */
+    left: 0;
+    right: 0;
+    background-color: #fff; 
+    border: none;
+    padding: 5px 2px;
+    margin-left: 15rem;
+    cursor: pointer;
+    max-width: 75px;
+    
+}
+
 
 
 
